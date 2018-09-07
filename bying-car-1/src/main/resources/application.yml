@@ -1,0 +1,11 @@
+server:
+  port: 9805
+  
+spring:
+  application:
+    name: bying-car-admin
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:9082/eureka/

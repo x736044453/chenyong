@@ -1,0 +1,17 @@
+server:
+  port: 9083
+
+spring:
+  application:
+    name: eureka-service
+
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    register-with-eureka: true  #是否自己向自己注册
+    fetch-registry: true  #由于注册中心的职责就是维护服务实例,它并不需要去检索服务,所以也设置为false
+    service-url:
+      defaultZone: http://eureka1:9082/eureka/
+#  server:
+#    enable-self-preservation: false  ##eureka自我保护机制

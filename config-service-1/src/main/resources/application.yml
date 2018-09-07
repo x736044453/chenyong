@@ -1,0 +1,22 @@
+server:
+  port: 9081
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/x736044453/myspringCloudConfig.git
+          search-paths: dev
+#        native:
+#          search-locations: D:/myspringCloudConfig/myspringCloudConfig/dev
+      label: master
+#  profiles:
+#    active: native
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://eureka1:9082/eureka/

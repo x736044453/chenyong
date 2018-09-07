@@ -1,0 +1,11 @@
+server:
+  port: 9806
+  
+spring:
+  application:
+    name: bying-car
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:9082/eureka/
