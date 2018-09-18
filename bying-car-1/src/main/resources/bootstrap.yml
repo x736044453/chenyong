@@ -1,8 +1,9 @@
 server:
-  port: 7005
+  port: 9805
+  
 spring:
   application:
-    name: config-client
+    name: bying-car
   cloud:
     config:
 #启动什么环境下的配置，dev 表示开发环境，这跟你仓库的文件的后缀有关，比如，仓库配置文件命名格式是cloud-config-dev.properties,所以profile 就要写dev
@@ -12,21 +13,8 @@ spring:
         enabled: true
 #这个名字是Config Server端的服务名字，不能瞎写。
         service-id: config-server
-#注册中心
+    
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:9082/eureka/
-#开启refresh接口
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: '*'
-
-#ribbon配置负载均衡策略
-bying-car:
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-
-  
