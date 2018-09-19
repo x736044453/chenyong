@@ -28,5 +28,11 @@ eureka:
 bying-car:
   ribbon: 
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#ribbon重试配置
+#    ConnectTimeout: 10000
+#    ReadTimeout: 5000
+#    OkToRetryOnAllOperations: true
+#    MaxAutoRetriesNextServer: 3
+#    MaxAutoRetries: 2
 
   

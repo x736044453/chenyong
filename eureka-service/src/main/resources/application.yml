@@ -12,7 +12,7 @@ eureka:
     register-with-eureka: true  #是否自己向自己注册
     fetch-registry: true  #由于注册中心的职责就是维护服务实例,它并不需要去检索服务,所以也设置为false
     service-url:
-      defaultZone: http://eureka1:9083/eureka/
+      defaultZone: http://eureka2:9083/eureka/
 #  server:
 #    enable-self-preservation: false
 
